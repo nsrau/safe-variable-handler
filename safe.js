@@ -56,7 +56,7 @@ function func(variable) {
   if (isDebug) {
     console.warn('Variable is not a function. Type:', typeof variable);
   }
-  return () => {};
+  return function() {};
 }
 
 const safe = { array, object, func };

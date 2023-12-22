@@ -2,6 +2,10 @@
 
 A utility library for handling different types of variables safely.
 
+Have you ever encountered the frustrating "Uncaught TypeError: "".map is not a function" error while working with APIs? This often happens when the API response is expected to be an array, but due to various reasons, it turns out to be a non-array (e.g., an empty string).
+
+This simple JavaScript library, Safe Variable Handler, is designed to tackle precisely this issue. It helps prevent common errors like "Uncaught TypeError" by safely checking if a variable is an array before performing operations like `.map()`. If the variable is not an array, the library provides a fallback, preventing your code from breaking.
+
 ## Installation
 
 ```bash
@@ -50,6 +54,7 @@ Example:
 global.DEBUG = true;
 
 // Now use the library
-const safeArray = safe.array('not an array');
-// Debug warning will be printed
+const safe = require('safe-variable-handler')
+safe.array('not an array').map(item => item);
+// Debug warning will be printed Variable is not an array. Type: string
 ```
