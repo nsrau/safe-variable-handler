@@ -3,3 +3,6 @@
 .vscode
 *.log
 .idea
+node_modules/
+test/
+
