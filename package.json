@@ -26,6 +26,6 @@
     "jest": "^29.7.0"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https:/registry.npmjs.org/"
   }
 }
