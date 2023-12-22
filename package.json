@@ -1,0 +1,28 @@
+{
+  "name": "safe-variable-handler",
+  "version": "1.0.0",
+  "description": "A utility library for handling different types of variables safely.",
+  "main": "safe.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "safe",
+    "utility",
+    "variable",
+    "handler"
+  ],
+  "author": "Newton Samin Urbanetz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/safe-variable-handler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/safe-variable-handler/issues"
+  },
+  "homepage": "https://github.com/your-username/safe-variable-handler#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
