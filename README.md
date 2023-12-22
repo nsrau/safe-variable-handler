@@ -31,6 +31,40 @@ console.log(safeObject); // { key: 'value' }
 const inputFunction = () => {};
 const safeFunction = safe.func(inputFunction);
 console.log(safeFunction); // [Function: inputFunction]
+
+const safe = require('@nsrau/safe-variable-handler');
+
+// Example 1: Safely executing a callback function
+const executeCallback = (callback) => {
+  const safeCallback = safe.function(callback);
+
+  // Safely execute the callback or provide a default behavior
+  return safeCallback() ?? 'default behavior'
+};
+
+// Example 2: Safely processing an array of numbers
+const processNumbers = (data) => {
+  const safeNumbersArray = safe.array(data);
+
+  // Safely calculate the sum of numbers or provide a default value
+  const sum = safeNumbersArray.reduce((acc, num) => acc + num, 0);
+  console.log('Sum of numbers:', sum);
+};
+
+// Example 3: Safely accessing properties in a nested object
+const accessNestedProperties = (apiResponse) => {
+  const safeResponseObject = safe.object(apiResponse);
+
+  // Safely access nested properties or provide default values
+  const username = safeResponseObject.user?.name || 'Guest';
+  const email = safeResponseObject.user?.email || 'guest@example.com';
+
+  console.log('Username:', username);
+  console.log('Email:', email);
+};
+
+// You can now confidently use these functions without worrying about unexpected input types causing errors.
+
 ```
 
 ## Functions
