@@ -17,23 +17,6 @@ npm install safe-variable-handler
 // Import the library
 const safe = require('safe-variable-handler');
 
-// Example with arrays
-const inputArray = [1, 2, 3];
-const safeArray = safe.array(inputArray);
-console.log(safeArray); // [1, 2, 3]
-
-// Example with objects
-const inputObject = { key: 'value' };
-const safeObject = safe.object(inputObject);
-console.log(safeObject); // { key: 'value' }
-
-// Example with functions
-const inputFunction = () => {};
-const safeFunction = safe.func(inputFunction);
-console.log(safeFunction); // [Function: inputFunction]
-
-const safe = require('@nsrau/safe-variable-handler');
-
 // Example 1: Safely executing a callback function
 const executeCallback = (callback) => {
   const safeCallback = safe.function(callback);
