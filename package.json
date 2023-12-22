@@ -16,12 +16,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/safe-variable-handler.git"
+    "url": "git+https://github.com/nsrau/safe-variable-handler.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/safe-variable-handler/issues"
+    "url": "https://github.com/nsrau/safe-variable-handler/issues"
   },
-  "homepage": "https://github.com/your-username/safe-variable-handler#readme",
+  "homepage": "https://github.com/nsrau/safe-variable-handler#readme",
   "devDependencies": {
     "jest": "^29.7.0"
   }
