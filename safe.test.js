@@ -23,6 +23,11 @@ describe('safe.object', () => {
     const input = 'not an object';
     expect(safe.object(input)).toEqual({});
   });
+
+  test('should return an empty object for array input', () => {
+    const inputArray = [1, 2, 3];
+    expect(safe.object(inputArray)).toEqual({});
+  });
 });
 
 describe('safe.func', () => {
