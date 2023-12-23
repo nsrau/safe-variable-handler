@@ -48,6 +48,15 @@ const accessNestedProperties = (apiResponse) => {
 
 // You can now confidently use these functions without worrying about unexpected input types causing errors.
 
+safe.func(() => console.log("test"))();
+safe.func(null)();
+
+console.log(safe.array("").map((item) => item));
+console.log(safe.array([1, 2, 3]).map((item) => item));
+
+console.log(Object.keys(safe.object(null)));
+console.log(Object.keys(safe.object({ key: 1 })));
+
 ```
 
 ## Functions
