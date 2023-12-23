@@ -34,7 +34,7 @@ function array(variable) {
  * @returns {Object} - The input object or an empty object if the input is not an object.
  */
 function object(variable) {
-  if (typeof variable === 'object' && variable !== null) {
+  if (typeof variable === 'object' && variable !== null && !Array.isArray(variable)) {
     return variable;
   }
   if (isDebug) {
