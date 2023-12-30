@@ -19,7 +19,7 @@ const safe = require('safe-variable-handler');
 
 // Example 1: Safely executing a callback function
 const executeCallback = (callback) => {
-  const safeCallback = safe.function(callback);
+  const safeCallback = safe.func(callback);
 
   // Safely execute the callback or provide a default behavior
   return safeCallback() ?? 'default behavior'
