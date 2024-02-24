@@ -7,7 +7,7 @@
 const isNode = typeof module !== 'undefined' && module.exports;
 
 const isDebug = () => {
-  if(isNode && typeof process === 'object' && typeof process?.env === 'object') {
+  if(isNode && typeof process === 'object' && typeof process.env === 'object') {
     return process.env.DEBUG === 'true'
   }
   return window?.DEBUG
