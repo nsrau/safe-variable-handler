@@ -6,10 +6,7 @@
  */
 const isNode = typeof module !== 'undefined' && module.exports;
 
-// Determine the global context based on the environment
-const globalContext = isNode ? global : window;
-
-const isDebug = typeof globalContext !== 'undefined' && globalContext.DEBUG;
+const isDebug = isNode ? process?.env?.DEBUG === 'true' : window?.DEBUG;
 
 /**
  * Safely returns an array. If the input is not an array, an empty array is returned.
