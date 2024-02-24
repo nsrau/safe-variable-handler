@@ -6,15 +6,28 @@ Have you ever encountered the frustrating "Uncaught TypeError: "".map is not a f
 
 This simple JavaScript library, Safe Variable Handler, is designed to tackle precisely this issue. It helps prevent common errors like "Uncaught TypeError" by safely checking if a variable is an array before performing operations like `.map()`. If the variable is not an array, the library provides a fallback, preventing your code from breaking.
 
+> Uncaught ReferenceError: global is not defined <br/> 
+> in case of error with vite, please see this discussion: https://github.com/vitejs/vite/discussions/5912
+
+> in case of error: <br/> 
+> TS1192: Module '"/node_modules/safe-variable-handler/safe"' has no default export <br/>
+> resolve with: import * as safe from 'safe-variable-handler'
+
 ## Installation
 
 ```bash
 npm install safe-variable-handler
 ```
+```bash
+yarn add safe-variable-handler
+```
+
 
 # Usage
 ```javascript
 // Import the library
+// import * as safe from 'safe-variable-handler'
+
 const safe = require('safe-variable-handler');
 
 // Example 1: Safely executing a callback function
