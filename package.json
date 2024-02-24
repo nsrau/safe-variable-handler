@@ -1,6 +1,6 @@
 {
   "name": "safe-variable-handler",
-  "version": "1.10.3",
+  "version": "1.10.4",
   "description": "A utility library for handling different types of variables safely.",
   "main": "safe.js",
   "scripts": {
