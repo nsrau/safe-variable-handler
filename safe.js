@@ -6,7 +6,12 @@
  */
 const isNode = typeof module !== 'undefined' && module.exports;
 
-const isDebug = isNode ? process?.env?.DEBUG === 'true' : window?.DEBUG;
+const isDebug = () => {
+  if(isNode && typeof process === 'object' && typeof process?.env === 'object') {
+    return process.env.DEBUG === 'true'
+  }
+  return window?.DEBUG
+}
 
 /**
  * Safely returns an array. If the input is not an array, an empty array is returned.
@@ -18,7 +23,7 @@ function array(variable) {
   if (Array.isArray(variable)) {
     return variable;
   }
-  if (isDebug) {
+  if (isDebug()) {
     console.warn('Variable is not an array. Type:', typeof variable);
   }
   return [];
@@ -34,7 +39,7 @@ function object(variable) {
   if (typeof variable === 'object' && variable !== null && !Array.isArray(variable)) {
     return variable;
   }
-  if (isDebug) {
+  if (isDebug()) {
     console.warn('Variable is not an object. Type:', typeof variable);
   }
   return {};
@@ -50,7 +55,7 @@ function func(variable) {
   if (typeof variable === 'function') {
     return variable;
   }
-  if (isDebug) {
+  if (isDebug()) {
     console.warn('Variable is not a function. Type:', typeof variable);
   }
   return function() {};
